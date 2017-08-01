@@ -61,7 +61,7 @@ gulp.task(cmd.scripts, function () {
         .pipe(babel())
         .pipe(gulpif(argv.production, stripDebug()))
         .pipe(gulpif(argv.production, uglify()))
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('main.min.js'))
         .pipe(gulpif(!argv.production, sourcemaps.write()))
         .pipe(plumber.stop())
         .pipe(gulp.dest('./dist/js/'))

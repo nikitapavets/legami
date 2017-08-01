@@ -36,6 +36,22 @@
             padding: 12px 10px;
         }
     }
+
+    &--tools {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        .tools {
+            &--tool {
+                margin: 0 10px;
+
+                &:hover {
+                    opacity: .75;
+                }
+            }
+        }
+    }
 }
 
 .menu {

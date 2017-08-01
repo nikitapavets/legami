@@ -49,6 +49,7 @@
     "yargs": "^8.0.1"
   },
   "dependencies": {
+    "famous-carousel": "^1.0.1",
     "normalize.css": "^7.0.0"
   }
 }
