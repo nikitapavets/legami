@@ -1,0 +1,76 @@
+.contacts {
+    display: flex;
+
+    &--contact {
+        flex: 1 1;
+
+        color: $white;
+    }
+
+    .email {
+        text-align: right;
+        padding-right: 60px; 
+        
+        background-color: $main-brown;
+
+        &--inner {
+            display: inline-block;
+            width: 400px;
+
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        &--title {
+            font-size: 16px;
+        }
+
+        &--description {
+            padding: 15px 0;
+        }
+
+        &--input {
+            width: 100%;
+            padding: 10px 8px;
+            
+            text-transform: uppercase;
+        }
+
+        &--policy {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+
+            input {
+                margin: 0;
+            }
+
+            span {
+                margin-left: 5px;
+
+                font-size: 8px;
+                text-transform: none;
+                opacity: .5;
+            }
+        }
+    }
+
+    .social {
+        padding-left: 60px; 
+        background-color: $main-red;
+
+        &--inner {
+            display: flex;
+            width: 400px;
+            height: 100%;
+
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        &--title {
+            margin: auto;
+            font-size: 16px;
+        }
+    }
+}

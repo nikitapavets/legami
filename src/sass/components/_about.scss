@@ -1,0 +1,38 @@
+.about {
+    background: $white;
+
+    &--inner {
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .list {
+        display: flex;
+        position: relative;
+        padding: 0 20px;
+        width: 200px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: #d7d7d7;
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+
+        &--items {
+            font-size: 12px;
+            opacity: .5;
+            margin-left: 20px;
+        }
+    }
+}

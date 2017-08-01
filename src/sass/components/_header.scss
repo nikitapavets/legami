@@ -1,0 +1,49 @@
+@import 'vars';
+
+.generalHeader {
+    &--information {
+        padding: 8px 0;
+
+        text-align: center;
+        color: $main-red;
+        text-transform: none;
+    }
+
+    &--navigation {
+        padding: 10px 0;
+
+        background: $white;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &--logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &--menu {
+        margin-left: 70px;
+        text-transform: uppercase;
+
+        ul > li {
+            float: left;
+            padding: 12px 10px;
+        }
+    }
+}
+
+.menu {
+    &--item {
+        color: $base-text;
+
+        &:hover {
+            color: $main-red;
+        }
+    }
+}

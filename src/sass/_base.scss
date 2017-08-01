@@ -1,0 +1,62 @@
+@import 'vars';
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $base_text;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $base_text;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $base_text;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $base_text;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 10px;
+    min-width: 320px;
+    line-height: 18px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    color: $base_text;
+    background: $base_bg;
+    text-transform: uppercase;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+input {
+    font-size: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $base-text;
+}
+
+.hidden {
+    display: none
+}
+
+.container {
+    width: 865px;
+    margin: 0 auto;
+}
+  

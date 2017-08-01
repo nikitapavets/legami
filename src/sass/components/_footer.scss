@@ -1,0 +1,40 @@
+@import '../vars';
+
+.generalFooter {
+    padding: 15px;
+
+    background: $main-brown;
+    text-align: center;
+    text-transform: none;
+    color: rgba(255,255,255,.5);
+
+    a {
+        color: rgba(255,255,255,.5); 
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+
+        &--item {
+            padding: 2px;
+
+            &:before {
+                content: '|';
+                margin-right: 1px;
+
+                color: rgba(255,255,255,.5);
+            }
+            
+            &:first-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

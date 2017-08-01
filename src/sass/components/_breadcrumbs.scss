@@ -1,0 +1,29 @@
+.breadcrumbs {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &--element {
+        float: left;
+        margin-right: 4px;
+        
+        opacity: .5;
+        text-transform: uppercase;
+        
+        &:before {
+            content: '/';
+            margin-right: 1px;
+        }
+
+        &:last-child {
+           opacity: .35; 
+        }
+        
+        &:first-child {
+            opacity: .5;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
