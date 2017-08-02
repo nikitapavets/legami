@@ -1,6 +1,9 @@
+@import '../vars';
+
 .similarGoods {
     .tabs {
         padding: 23px;
+        margin-bottom: 15px;
 
         text-align: center;
 
@@ -14,6 +17,59 @@
             &.active {
                 opacity: 1;
                 border-bottom: 1px solid $base_text;
+            }
+        }
+    }
+
+    .slider {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: left 500ms linear;
+
+        &--wrapper {
+            position: relative;
+            height: 375px;
+            overflow: hidden;
+        }
+        
+        &--slide {
+            float: left;
+            width: 175px;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        &--arrow {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 35%;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            z-index: 999;
+
+            &:hover {
+                opacity: .75;
+            }
+
+            &.left {
+                background: url('/img/icons/back.png') center no-repeat;
+                background-size: 15px;
+                left: 0;
+            }
+
+            &.right {
+                background: url('/img/icons/next.png') center no-repeat;
+                background-size: 15px;
+                right: 0;
+            }
+        }
+    
+        .slide {
+            &--checkout {
+                color: $main-red;
             }
         }
     }

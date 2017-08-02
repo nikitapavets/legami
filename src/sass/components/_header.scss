@@ -31,9 +31,58 @@
         margin-left: 70px;
         text-transform: uppercase;
 
-        ul > li {
-            float: left;
-            padding: 12px 10px;
+        .menu {
+            & > li {
+                float: left;
+                padding: 12px 10px;
+                position: relative;
+
+                &:hover {
+                    .subMenu {
+                        display: block;
+                    }
+                }
+            }
+
+            &--item {
+                color: $base-text;
+
+                &:hover {
+                    color: $main-red;
+                }
+
+                &.hash {
+                    color: $main-red;
+
+                    &:hover {
+                        opacity: .75;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 999;
+            width: 250px;
+            display: none;
+            padding-bottom: 12px;
+
+            background: $white;
+
+            & > li {
+                padding: 12px 10px 0;
+            }
+
+            &--item {
+                color: $base-text;
+
+                &:hover {
+                    color: $main-red;
+                }
+            }
         }
     }
 
@@ -50,16 +99,6 @@
                     opacity: .75;
                 }
             }
-        }
-    }
-}
-
-.menu {
-    &--item {
-        color: $base-text;
-
-        &:hover {
-            color: $main-red;
         }
     }
 }

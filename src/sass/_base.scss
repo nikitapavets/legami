@@ -29,7 +29,7 @@ body {
     text-transform: uppercase;
 }
 
-div {
+div, section, input {
     box-sizing: border-box;
 }
 
@@ -58,5 +58,22 @@ a {
 .container {
     width: 865px;
     margin: 0 auto;
+}
+
+.mainButton {
+    font-size: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin: 4px 0;
+    border: 1px solid rgba(255,255,255,.5);
+    
+    color: $white;
+    background: $default-button;
+    text-transform: uppercase;
+
+    &.green {
+        background: $main-green;
+    }
 }
   

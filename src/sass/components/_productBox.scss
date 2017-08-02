@@ -42,22 +42,6 @@
             }
         }
 
-        &--button {
-            display: block;
-            width: 275px;
-            padding: 10px 0;
-            margin: 4px 0;
-            border: 1px solid rgba(255,255,255,.5);
-            
-            color: $white;
-            background: $default-button;
-            text-transform: uppercase;
-
-            &-green {
-                background: $main-green;
-            }
-        }
-
         &--images {
             float: left;
             width: 90px;

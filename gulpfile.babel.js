@@ -29,7 +29,6 @@ const sync = gulpsync(gulp);
 
 const cmd = {
     connect: 'browser-sync',
-    scripts: 'scripts',
     styles: 'styles',
     watch: 'watch',
     clean: 'clean',
@@ -49,24 +48,6 @@ gulp.task(cmd.connect, function() {
 gulp.task(cmd.clean, function () {
     return gulp.src('./dist', {read: false})
         .pipe(clean());
-});
-
-gulp.task(cmd.scripts, function () {
-    return gulp.src([
-        './src/js/**/*.js'
-    ])
-        .pipe(plumber())
-        .pipe(filesize())
-        .pipe(gulpif(!argv.production, sourcemaps.init()))
-        .pipe(babel())
-        .pipe(gulpif(argv.production, stripDebug()))
-        .pipe(gulpif(argv.production, uglify()))
-        .pipe(concat('main.min.js'))
-        .pipe(gulpif(!argv.production, sourcemaps.write()))
-        .pipe(plumber.stop())
-        .pipe(gulp.dest('./dist/js/'))
-        .pipe(filesize())
-        .on('error', gutil.log)
 });
 
 gulp.task(cmd.styles, function () {
@@ -105,10 +86,9 @@ gulp.task(cmd.img, function () {
 
 gulp.task(cmd.watch, [cmd.connect], function () {
     gulp.watch('./src/sass/**/*.scss', [cmd.styles]);
-    gulp.watch('./src/js/**/*.js', [cmd.scripts], browsersync.reload);
     gulp.watch('./src/**/*.html', [cmd.move], browsersync.reload);
 });
 
-gulp.task('build', sync.sync([cmd.clean, cmd.scripts, cmd.styles, cmd.move, cmd.img]));
+gulp.task('build', sync.sync([cmd.clean, cmd.styles, cmd.move, cmd.img]));
 
 gulp.task('default', [cmd.watch]);
