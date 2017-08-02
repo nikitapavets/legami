@@ -27,9 +27,14 @@
         width: 10px;
         height: 10px;
         border: none;
+        outline: none;
 
         background: url('/img/icons/close.png') center no-repeat;
         cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
     }
 
     &--title {

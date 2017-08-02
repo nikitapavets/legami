@@ -52,7 +52,7 @@ a {
 }
 
 .hidden {
-    display: none
+    display: none!important;
 }
 
 .container {
@@ -71,6 +71,7 @@ a {
     color: $white;
     background: $default-button;
     text-transform: uppercase;
+    cursor: pointer;
 
     &.green {
         background: $main-green;

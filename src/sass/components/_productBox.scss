@@ -36,10 +36,17 @@
             display: block;
             margin: 15px 0;
             input {
-                width: 8px;
-                padding: 2px 7px;
-                margin-left: 2px;
+                font-size: 12px;
+                border: none;
+                padding: 3px 5px;;
+                width: 30px;
+                text-align: center;
+                outline: none;
             }
+        }
+
+        &--more {
+            padding: 20px 5px;
         }
 
         &--images {
@@ -61,6 +68,22 @@
 
         &--item {
             margin: 15px 0;
+        }
+    }
+
+    .more {
+        &--item {
+            position: relative;
+            display: flex;
+            padding: 4px;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 15px;
+                background: url('/img/icons/arrow_down.png') center no-repeat;
+            }
         }
     }
 }
