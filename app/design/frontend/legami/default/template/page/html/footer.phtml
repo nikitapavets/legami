@@ -120,49 +120,49 @@
             <div class="box--info">
                 <div class="info">
                     <div class="info--title">Inserisci il testo</div>
-                    <div class="info--field field">
+                    <div class="info--field field interactiveInput" data-maxLength="20">
                         <div class="field--postfix">Max 20 caratteri</div>
-                        <input class="field--input" placeholder="Name Cogname"/>
-                        <div class="field--syfix">15/20</div>
+                        <input class="field--input" placeholder="Name Cogname" maxlength="20"/>
+                        <div class="field--syfix interactiveCounter">0/20</div>
                     </div>
                     <div class="info--field field">
                         <input class="field--input"/>
                     </div>
                 </div>
                 <div class="info">
-                    <div class="info--title">Scegli il corole</div>
-                    <ul class="info--smallCards">
-                        <li class="smallCard active">
-                            <div class="smallCard--rectangle smallCard--rectangle-red" style="background: #fa2102"></div>
+                    <div class="info--title">Scegli il corole: <span class="interactiveCardValue">Rosso</span></div>
+                    <ul class="info--smallCards interactiveCards">
+                        <li class="smallCard active interactiveCard active">
+                            <div class="smallCard--rectangle smallCard--rectangle-red" style="background: #fa2102" value="Rosso"></div>
                             <div class="smallCard--sign">Rosso</div>
                         </li>
-                        <li class="smallCard">
-                            <div class="smallCard--rectangle smallCard--rectangle-blue" style="background: #0069b5"></div>
+                        <li class="smallCard interactiveCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-blue" style="background: #0069b5" value="Blu"></div>
                             <div class="smallCard--sign">Blu</div>
                         </li>
-                        <li class="smallCard">
-                            <div class="smallCard--rectangle smallCard--rectangle-orange" style="background: #d89100"></div>
+                        <li class="smallCard interactiveCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-orange" style="background: #d89100" value="Oro"></div>
                             <div class="smallCard--sign">Oro</div>
                         </li>
-                        <li class="smallCard">
-                            <div class="smallCard--rectangle smallCard--rectangle-gray" style="background: #dadada"></div>
+                        <li class="smallCard interactiveCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-gray" style="background: #dadada" value="Argento"></div>
                             <div class="smallCard--sign">Argento</div>
                         </li>
-                        <li class="smallCard">
-                            <div class="smallCard--rectangle smallCard--rectangle-black" style="background: #010101"></div>
+                        <li class="smallCard interactiveCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-black" style="background: #010101" value="Nero"></div>
                             <div class="smallCard--sign">Nero</div>
                         </li>
                     </ul>
                 </div>
                 <div class="info">
-                    <div class="info--title">Scegli font</div>
-                    <ul class="info--smallCards">
+                    <div class="info--title">Scegli font: <span class="interactiveFontCardValue">Sans</span></div>
+                    <ul class="info--smallCards interactiveFontCards">
                         <li class="smallCard active">
-                            <div class="smallCard--rectangle smallCard--rectangle-font" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
+                            <div class="smallCard--rectangle smallCard--rectangle-font" value="Sans" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
                             <div class="smallCard--sign">Sans</div>
                         </li>
                         <li class="smallCard">
-                            <div class="smallCard--rectangle smallCard--rectangle-font" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
+                            <div class="smallCard--rectangle smallCard--rectangle-font" value="Serif" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
                             <div class="smallCard--sign">Serif</div>
                         </li>
                     </ul>
