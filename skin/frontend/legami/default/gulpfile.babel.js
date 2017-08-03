@@ -36,22 +36,8 @@ const cmd = {
     img: 'img',
 };
 
-gulp.task(cmd.connect, function() {
-    browsersync.init({
-        server: {
-            baseDir: "./dist/"
-        },
-        notify: false
-    });
-});
-
-gulp.task(cmd.clean, function () {
-    return gulp.src('./dist', {read: false})
-        .pipe(clean());
-});
-
 gulp.task(cmd.styles, function () {
-    return gulp.src('./src/sass/**/*.scss')
+    return gulp.src('./sass/**/*.scss')
         .pipe(gulpif(!argv.production, sourcemaps.init()))
         .pipe(sass(
             {
@@ -60,35 +46,18 @@ gulp.task(cmd.styles, function () {
         ).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(cssBase64({
-            baseDir: './src/images',
+            baseDir: './images/',
             extensionsAllowed: ['.jpg', '.png', '.gif', '.svg']
         }))
-        .pipe(rename({suffix: '.min', prefix: ''}))
+        .pipe(rename('main.min.css'))
         .pipe(cleanCSS())
         .pipe(gulpif(!argv.production, sourcemaps.write()))
-        .pipe(gulp.dest('./dist/styles/'))
+        .pipe(gulp.dest('./css/'))
         .pipe(browsersync.reload({stream: true}))
 });
 
-gulp.task(cmd.move, function () {    
-    gulp.src([
-        './src/index.html'
-    ])
-    .pipe(gulp.dest("./dist/"));     
+gulp.task(cmd.watch, [cmd.styles], function () {
+    gulp.watch('./sass/**/*.scss', [cmd.styles]);
 });
-
-gulp.task(cmd.img, function () {    
-    gulp.src([
-        './src/img/**/*'
-    ])
-    .pipe(gulp.dest("./dist/img"));     
-});
-
-gulp.task(cmd.watch, [cmd.connect], function () {
-    gulp.watch('./src/sass/**/*.scss', [cmd.styles]);
-    gulp.watch('./src/**/*.html', [cmd.move], browsersync.reload);
-});
-
-gulp.task('build', sync.sync([cmd.clean, cmd.styles, cmd.move, cmd.img]));
 
 gulp.task('default', [cmd.watch]);

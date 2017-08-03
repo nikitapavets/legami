@@ -1,0 +1,189 @@
+<section class="contacts">
+    <div class="contacts--contact email">
+        <div class="email--inner">
+            <div class="email--title">Newsletter</div>
+            <div class="email--description">
+                Promo e novita dal mondo Legami.</br>
+                Ricevi subito il 10% di sconto sul tuo primo ordine!
+            </div>
+            <div class="email--inputField">
+                <input type="text" class="" placeholder="Enter your email address">
+                <div style="background-image: url(<?=$this->getSkinUrl('/images/icons/arrow_right_black.png')?>"></div>
+            </div>
+            <label for="emailPolice" class="email--policy">
+                <input type="checkbox" id="emailPolice">
+                <span>I read the private policy</span>
+            </label>
+        </div>
+    </div>
+    <div class="contacts--contact social">
+        <div class="social--inner">
+            <div class="social--title">
+                Seguici sui social
+            </div>
+            <div class="social--icons">
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/fb_b.png')?>"></a>
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/tw_b.png')?>"></a>
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/p_b.png')?>"></a>
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/inst_b.png')?>"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="container">
+        <div class="about--inner">
+            <div class="about--list list">
+                <div class="list--image">
+                    <img src="<?php echo $this->getSkinUrl('/images/icons/rocket.jpg'); ?>" alt="">
+                </div>
+                <ul class="list--items">
+                    <li class="list--item">
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="list--item">
+                        <a href="#">Ethical code</a>
+                    </li>
+                    <li class="list--item">
+                        <a href="#">Legami for life</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="about--list list">
+                <div class="list--image">
+                    <img src="<?php echo $this->getSkinUrl('/images/icons/doc.jpg'); ?>" alt="">
+                </div>
+                <ul class="list--items">
+                    <li class="list--item">
+                        <a href="#">Lavora con noi</a>
+                    </li>
+                    <li class="list--item">
+                        <a href="#">Special for businesses</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="about--list list">
+                <div class="list--image">
+                    <img src="<?php echo $this->getSkinUrl('/images/icons/cord.jpg'); ?>" alt="">
+                </div>
+                <ul class="list--items">
+                    <li class="list--item">
+                        <a href="#">Contattaci</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="generalFooter">
+    <div class="container">
+        <div class="generalFooter--menu">
+            <ul class="menu">
+                <li class="menu--item">
+                    <a href="#">Contacts</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Condizioni di vendita</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Condizioni d'uso</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Informativa sui diritto di recesso</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Risoluzione controversie</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Paesi e tempi di spedizione</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Privacy</a>
+                </li>
+                <li class="menu--item">
+                    <a href="#">Cookie</a>
+                </li>
+            </ul>
+        </div>
+        <div class="generalFooter--override">Manage by triboo digitale</div>
+    </div>
+</footer>
+
+<div class="popup--wrapper hidden" id="popup">
+    <section class="popup">
+        <button class="popup--close" id="handleClosePopup" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/close.png'); ?>')"></button>
+        <div class="popup--title">Taccuino maxi a righe</div>
+        <div class="popup--box box">
+            <div class="box--img">
+                <img src="<?php echo $this->getSkinUrl('/images/goods/1.jpg'); ?>" alt="">
+            </div>
+            <div class="box--info">
+                <div class="info">
+                    <div class="info--title">Inserisci il testo</div>
+                    <div class="info--field field">
+                        <div class="field--postfix">Max 20 caratteri</div>
+                        <input class="field--input" placeholder="Name Cogname"/>
+                        <div class="field--syfix">15/20</div>
+                    </div>
+                    <div class="info--field field">
+                        <input class="field--input"/>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info--title">Scegli il corole</div>
+                    <ul class="info--smallCards">
+                        <li class="smallCard active">
+                            <div class="smallCard--rectangle smallCard--rectangle-red" style="background: #fa2102"></div>
+                            <div class="smallCard--sign">Rosso</div>
+                        </li>
+                        <li class="smallCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-blue" style="background: #0069b5"></div>
+                            <div class="smallCard--sign">Blu</div>
+                        </li>
+                        <li class="smallCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-orange" style="background: #d89100"></div>
+                            <div class="smallCard--sign">Oro</div>
+                        </li>
+                        <li class="smallCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-gray" style="background: #dadada"></div>
+                            <div class="smallCard--sign">Argento</div>
+                        </li>
+                        <li class="smallCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-black" style="background: #010101"></div>
+                            <div class="smallCard--sign">Nero</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <div class="info--title">Scegli font</div>
+                    <ul class="info--smallCards">
+                        <li class="smallCard active">
+                            <div class="smallCard--rectangle smallCard--rectangle-font" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
+                            <div class="smallCard--sign">Sans</div>
+                        </li>
+                        <li class="smallCard">
+                            <div class="smallCard--rectangle smallCard--rectangle-font" style="background-image: url('<?php echo $this->getSkinUrl('/images/icons/font.png'); ?>')"></div>
+                            <div class="smallCard--sign">Serif</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <div class="info--price">$16.90</div>
+                    <ul class="info--priceAdditions">
+                        <li>+ $5.00 personalizzazione</li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <div class="info--quantityBox">
+                        <span>QT.</span>
+                        <input type="text" value="1">
+                    </div>
+                </div>
+                <button class="mainButton green">Conferma e aggiungi al carrello</button>
+            </div>
+        </div>
+        <div class="popup--commentary">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem laborum repellat quas amet rerum repudiandae molestias, quam beatae. Nam a eveniet inventore, enim corporis dolores nemo nisi consectetur aperiam optio!
+        </div>
+    </section>
+</div>

@@ -9,11 +9,6 @@
         
         opacity: .5;
         text-transform: uppercase;
-        
-        &:before {
-            content: '/';
-            margin-right: 1px;
-        }
 
         &:last-child {
            opacity: .35; 
@@ -21,9 +16,6 @@
         
         &:first-child {
             opacity: .5;
-            &:before {
-                display: none;
-            }
         }
     }
 }

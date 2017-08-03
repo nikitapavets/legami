@@ -38,26 +38,52 @@
                 position: relative;
 
                 &:hover {
-                    .subMenu {
+                    & > ul {
                         display: block;
                     }
                 }
-            }
 
-            &--item {
-                color: $base-text;
-
-                &:hover {
-                    color: $main-red;
-                }
-
-                &.hash {
-                    color: $main-red;
+                & > a {
+                    color: $base-text;
 
                     &:hover {
-                        opacity: .75;
+                        color: $main-red;
+                    }
+
+                    &.hash {
+                        color: $main-red;
+
+                        &:hover {
+                            opacity: .75;
+                        }
                     }
                 }
+
+                & > ul {
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    z-index: 999;
+                    width: 250px;
+                    display: none;
+                    padding-bottom: 12px;
+
+                    background: $white;
+
+                    & > li {
+                        padding: 12px 10px 0;
+
+                        & > a {
+                            color: $base-text;
+
+                            &:hover {
+                                color: $main-red;
+                            }
+                        }
+                    }
+
+                }
+
             }
         }
 

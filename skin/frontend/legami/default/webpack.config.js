@@ -1,7 +1,7 @@
 module.exports = { 
-    entry: './src/js/main', 
+    entry: './scripts/main', 
     output: {
-        path: `${__dirname}/dist/js`, 
+        path: `${__dirname}/js/`, 
         filename: 'main.min.js' 
     }, 
     watch: true 

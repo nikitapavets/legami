@@ -1,0 +1,29 @@
+<header class="generalHeader">
+    <div class="generalHeader--information">
+        Spedizione gratuita per ordini sopra i 30 per Paesi UE
+    </div>
+    <div class="generalHeader--navigation">
+        <div class="container">
+            <div class="navigation">
+                <a class="navigation--logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="Legami">
+                </a>
+                <nav class="navigation--menu">
+                    <?php echo $this->getChildHtml('topMenu') ?>
+                </nav>
+                <div class="navigation--tools tools">
+                    <a class="tools--tool" href="#">
+                        <img src="<?php echo $this->getSkinUrl('/images/icons/search.jpg'); ?>" alt="">
+                    </a>
+                    <a class="tools--tool" href="#">
+                        <img src="<?php echo $this->getSkinUrl('/images/icons/user.jpg'); ?>" alt="">
+                    </a>
+                    <a class="tools--tool" href="#">
+                        <img src="<?php echo $this->getSkinUrl('/images/icons/basket.jpg'); ?>" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+

@@ -1,0 +1,29 @@
+<?php if($this->getItems()->getSize()): ?>
+<div class="container">
+    <section class="similarGoods">
+        <header class="tabs">
+            <a href="#" class="tabs--tab active">Wear with</a>
+            <a href="#" class="tabs--tab">You may also like</a>
+        </header>
+        <div class="similarGoods--slides slider--wrapper">
+            <button class="slider--arrow left" style="background-image: url(<?=$this->getSkinUrl('images/icons/back.png')?>)" ></button>
+            <button class="slider--arrow right" style="background-image: url(<?=$this->getSkinUrl('images/icons/next.png')?>)"></button>
+            <div class="slider">
+                <?php foreach($this->getItems() as $_item): ?>
+                    <div class="slider--slide slide">
+                        <a class="slide--img" href="<?=$_item->getProductUrl()?>" title="<?=$this->escapeHtml($_item->getName())?>">
+                            <img src="<?=$this->helper('catalog/image')->init($_item, 'thumbnail')->resize(120)?>" width="120" alt="<?=$this->escapeHtml($_item->getName())?>" />
+                        </a>
+                        <div class="slide--title"><?=$_item->getName()?></div>
+                        <div class="slide--price"><?=$this->getPriceHtml($_item, true, '-related') ?></div>
+                        <a class="slide--checkout" href="<?=$this->getAddToWishlistUrl($_item)?>">
+                            <span>Shop now</span>
+                            <div style="background-image: url('<?=$this->getSkinUrl('/images/icons/arrow_right.png')?>"></div>
+                        </a>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </section>
+</div>
+<?php endif ?>

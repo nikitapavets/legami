@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <remove name="paypal.partner.right.logo"/>
+        <remove name="external.pagecache.cookie"/>
+        <remove name="catalog.compare.sidebar"/>
+        <remove name="right.permanent.callout"/>
+        <remove name="global_cookie_notice"/>
+        <remove name="cart_sidebar"/>
+        <remove name="right.poll"/>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/main.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>css/main.min.css</name>
+            </action>
+        </reference>
+    </default>
+</layout>

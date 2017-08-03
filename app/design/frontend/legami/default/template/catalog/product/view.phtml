@@ -1,0 +1,49 @@
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+
+<div class="container">
+    <section class="productBox">
+        <div class="productBox--info">
+            <?=$this->getChildHtml('media')?>
+        </div>
+        <div class="productBox--info">
+            <div class="info--title"><?=$_helper->productAttribute($_product, $_product->getName(), 'name')?></div>
+            <div class="info--price"><?=$this->getPriceHtml($_product, true) ?></div>
+            <div class="info--description">Taccuino maxi a righe</div>
+            <div class="info--brand">
+                <img src="<?=$this->getSkinUrl('images/brand.jpg')?>" alt="Brand">
+            </div>
+            <label class="info--quantity" for="infoQuantity">
+                <span>QTY</span>
+                <input type="text" id="infoQuantity" value="1">
+            </label>
+            <button class="mainButton green" onclick="productAddToCartForm.submit(this)">Add to cart</button>
+            <button class="mainButton" id="handlePersonalizza">
+                <div class="mainButton--icon" style="background-image: url('<?=$this->getSkinUrl('images/icons/pen.png')?>')"></div>
+                <span>Personalizza</span>
+            </button>
+            <ul class="info--more more">
+                <li>
+                    <a href="#" class="more--item">Details 
+                        <span class="more--icon" style="background-image: url('<?=$this->getSkinUrl('/images/icons/arrow_down.png')?>"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="more--item">Shipping
+                        <span class="more--icon" style="background-image: url('<?=$this->getSkinUrl('/images/icons/arrow_down.png')?>"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="more--item">Returns
+                        <span class="more--icon" style="background-image: url('<?=$this->getSkinUrl('/images/icons/arrow_down.png')?>"></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="info--social">
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/fb.png')?>"></a>
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/tw.png')?>"></a>
+                <a href="#" style="background-image: url('<?=$this->getSkinUrl('/images/icons/p.png')?>"></a>
+            </div>
+        </div>
+    </section>
+</div>

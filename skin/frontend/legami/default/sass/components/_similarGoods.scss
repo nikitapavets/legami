@@ -26,6 +26,7 @@
         left: 0;
         top: 0;
         transition: left 500ms linear;
+        display: flex;
 
         &--wrapper {
             position: relative;
@@ -54,14 +55,17 @@
                 opacity: .75;
             }
 
-            &.left {
-                background: url('/img/icons/back.png') center no-repeat;
-                background-size: 15px;
+            &.left {   
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
                 left: 0;
             }
 
-            &.right {
-                background: url('/img/icons/next.png') center no-repeat;
+            &.right { 
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
                 background-size: 15px;
                 right: 0;
             }
@@ -69,7 +73,18 @@
     
         .slide {
             &--checkout {
+                display: flex;
+                justify-content: center;
+
                 color: $main-red;
+
+                & > div {
+                    width: 15px;
+                    height: 15px;
+
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
             }
         }
     }
